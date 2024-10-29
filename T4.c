@@ -32,12 +32,18 @@ printf("Enter Vowel to retrieve its frequency or enter z to exit\n");
 char vowel;
 int VF;
 scanf(" %c", &vowel);
-if (vowel!='z'){
+while (vowel!='z'){
+if(vowel == 'a' || vowel == 'e' || vowel == 'i' || vowel == 'o' || vowel == 'u') {
+
 VF = VowelFreq(sentence, vowel);
 printf("Vowel Frequencies for the letter %c is %d", vowel, VF);
 printf("\nEnter Vowel to retrieve its frequency or enter z to exit\n");
 scanf(" %c", &vowel);
 }
+else {
+	printf("Not a vowel!");
+	break;}
+	}
 
 return 0;
 }
